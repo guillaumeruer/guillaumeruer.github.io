@@ -31,6 +31,7 @@ body {
     position: fixed;
     top: 0;
     transition: top 400ms;
+    background: #fff;
 }
 
 .navigation .navigation__logo {
@@ -91,6 +92,10 @@ body {
     cursor: pointer;
     transition: all 150ms ease-in-out;
 }
+.button a {
+    text-decoration: none;
+    color: #fff;
+}
 .button:hover {
     box-shadow: 0 0 6px 1px rgba(38, 34, 42, .7);
 }
@@ -104,7 +109,7 @@ body {
 
 .main {
     height: calc(100vh - 6rem);
-    background: url('/assets/img/thinking.svg');
+    background: url('../img/thinking.svg');
     background-repeat: no-repeat;
     background-position: 80% 30%;
     display: flex;
@@ -122,7 +127,19 @@ body {
 .main__subtitle {
     font-size: 32px;
 }
+
 .project {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 16rem; 
+}
+.project.reverse {
+    grid-template-columns: 2fr 1fr;
+}
+.project__container {
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -130,6 +147,7 @@ body {
     justify-content: center;
     padding-left: 16rem;
 }
+
 .project__number {
     font-size: 56px;
     font-weight: 900;
@@ -141,6 +159,10 @@ body {
 
 .project__subtitle {
     font-size: 24px;
+}
+
+.project__image img {
+    width: 80%;
 }
 
 .social__items {
@@ -168,4 +190,26 @@ body {
 
 .footer .social__link {
     color: #FFFFFF;
+}
+
+.project__details {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.project__details h2 {
+    padding: 1rem;
+}
+.project__details img {
+    width: 80%;
+    height: auto;
+    margin: auto;
+    box-shadow: 0 0 8px 0 rgba(38, 34, 42, .25);
+}
+.project__infos__container {
+    padding: 2rem;
+}
+.project__infos__container p {
+    padding: .5rem 0;
 }
